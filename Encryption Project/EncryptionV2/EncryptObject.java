@@ -4,4 +4,5 @@ import javax.swing.*;
 
 public class EncryptObject {
     private JButton encrypt;
+    private int j = 0;
 }
