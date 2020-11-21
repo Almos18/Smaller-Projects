@@ -1,17 +1,18 @@
-package EncryptionV2;
+/*package EncryptionV2;
 
 import javax.swing.*;
 
-public class EncryptObject
+public class DecryptObject
 {
-    public static String encryptString(String encryptTemp)
+    public static String decryptString(String decryptTemp)
     {
-        encryptTemp = JOptionPane.showInputDialog(null,"Please input a message you want encrypted",
+        decryptTemp = JOptionPane.showInputDialog(null,"Please input a message you want encrypted",
         "Question",JOptionPane.QUESTION_MESSAGE);
 
-        for(int i=0;i<encryptTemp.length();i++)
+        for(int i=0;i<decryptTemp.length();i++)
         {
-            encryptTemp = encryptTemp.replace('a','-');
+
+            decryptTemp = decryptTemp.replace('a','-');
             encryptTemp = encryptTemp.replace('b','£');
             encryptTemp = encryptTemp.replace('c','*');
             encryptTemp = encryptTemp.replace('d','@');
@@ -80,4 +81,4 @@ public class EncryptObject
         }
         return encryptTemp;
     }
-}
+}*/
