@@ -2,12 +2,10 @@ package EncryptionV2;
 
 import javax.swing.*;
 
-public class EncryptObject
+public class EncryptMessage
 {
     public static String encryptString(String encryptTemp)
     {
-        encryptTemp = JOptionPane.showInputDialog(null,"Please input a message you want encrypted",
-        "Question",JOptionPane.QUESTION_MESSAGE);
 
         for(int i=0;i<encryptTemp.length();i++)
         {

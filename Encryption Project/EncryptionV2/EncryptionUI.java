@@ -3,61 +3,112 @@ package EncryptionV2;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.*;
 
-public class EncryptionUI {
+public class EncryptionUI extends JFrame implements ActionListener{
 
     JButton encryptButton;
     JButton decryptButton;
-    JButton showRecorded;
+    JMenu fileMenu;
+    JMenu editMenu;
 
     public EncryptionUI() {
-        JFrame jFrameWindow = new JFrame();
 
-        FlowLayout flowLayout = new FlowLayout();
+        super("Encryptor");
 
-        jFrameWindow.setLayout(flowLayout);
-        jFrameWindow.setSize(250, 150);
-        jFrameWindow.setTitle("Encryption");
-        jFrameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridBagLayout());
 
-        JLabel jLabel = new JLabel("Choose what you want to do");
-        jFrameWindow.add(jLabel);
+        createEncryptionMenu();
+        createEditMenu();
+        createJButtons();
 
-        encryptButton = new JButton("Encrypt Message");
-        jFrameWindow.add(encryptButton);
+        JMenuBar menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
+        menuBar.setBackground(Color.white);
+        menuBar.add(fileMenu);
+        menuBar.add(editMenu);
 
-        decryptButton = new JButton("Decrypt Message");
-        jFrameWindow.add(decryptButton);
+        //setLocation(200,150);
+        setSize(350, 200);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
 
-        showRecorded = new JButton("Show Stored Strings");
-        jFrameWindow.add(showRecorded);
 
-        ButtonEventHandler handler = new ButtonEventHandler();
 
-        encryptButton.addActionListener(handler);
-        decryptButton.addActionListener(handler);
-        showRecorded.addActionListener(handler);
-
-        jFrameWindow.setVisible(true);
     }
 
     public static void main(String args[])
     {
         EncryptionUI guiApp = new EncryptionUI();
     }
-        private class ButtonEventHandler implements ActionListener
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+
+    }
+
+    private class ButtonEventHandler implements ActionListener
         {
             public void actionPerformed(ActionEvent e)
             {
                 if(e.getSource()==encryptButton)
                 {
-                    EncryptObject.encryptString(encryptButton.getText());
+                    EncryptMessage.encryptString(encryptButton.getText());
                 }
                 else if(e.getSource()==decryptButton)
                 {
                     //DecryptObject.decryptString(decryptButton.getText());
                 }
             }
+        }
+        private void createEncryptionMenu(){
+        JMenuItem item;
+
+        fileMenu = new JMenu("View");
+
+        item = new JMenuItem("Stored Messages");
+        item.addActionListener(this);
+        fileMenu.add(item);
+
+        item = new JMenuItem("Longest Message");
+        item.addActionListener(this);
+        fileMenu.add(item);
+
+        item = new JMenuItem("Shortest Message");
+        item.addActionListener(this);
+        fileMenu.add(item);
+
+        fileMenu.addSeparator();
+
+        item = new JMenuItem("Quit");
+        item.addActionListener(this);
+        fileMenu.add(item);
+        }
+
+    private void createEditMenu(){
+        JMenuItem item;
+
+        editMenu = new JMenu("Edit");
+
+        item = new JMenuItem("Delete Message");
+        item.addActionListener(this);
+        editMenu.add(item);
+
+        item = new JMenuItem("Add Message");
+        item.addActionListener(this);
+        editMenu.add(item);
+    }
+
+        private void createJButtons(){
+        encryptButton = new JButton("Encrypt Message");
+        add(encryptButton);
+
+        decryptButton = new JButton("Decrypt Message");
+        add(decryptButton);
+
+        ButtonEventHandler handler = new ButtonEventHandler();
+
+        encryptButton.addActionListener(handler);
+        decryptButton.addActionListener(handler);
         }
 }
