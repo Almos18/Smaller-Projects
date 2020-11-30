@@ -2,6 +2,7 @@ package EncryptionV2;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Arrays;
 import javax.swing.*;
 
 public class EncryptionUI extends JFrame implements ActionListener{
@@ -10,13 +11,23 @@ public class EncryptionUI extends JFrame implements ActionListener{
     JButton decryptButton;
     JMenu fileMenu;
     JMenu editMenu;
+    JLabel passwordLabel;
+    JLabel usernameLabel;
+    JTextField passwordField;
+    JTextField usernameField;
+    String[] encryptedMessages = new String[10];
+    String[] decryptedMessages = new String[10];
+    int i = 0;
 
     public EncryptionUI() {
 
         super("Encryptor");
 
+        EncryptObject main = new EncryptObject(encryptedMessages, decryptedMessages);
+
         setLayout(new GridBagLayout());
 
+        createLoginMenu();
         createEncryptionMenu();
         createEditMenu();
         createJButtons();
@@ -28,10 +39,9 @@ public class EncryptionUI extends JFrame implements ActionListener{
         menuBar.add(editMenu);
 
         //setLocation(200,150);
-        setSize(350, 200);
+        setSize(450, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-
 
 
     }
@@ -46,14 +56,15 @@ public class EncryptionUI extends JFrame implements ActionListener{
     {
 
     }
-
-    private class ButtonEventHandler implements ActionListener
+        private class ButtonEventHandler implements ActionListener
         {
             public void actionPerformed(ActionEvent e)
             {
                 if(e.getSource()==encryptButton)
                 {
-                    EncryptMessage.encryptString(encryptButton.getText());
+                    encryptedMessages[i] = EncryptMessage.encryptString(encryptButton.getText());
+                    i++;
+                    JOptionPane.showMessageDialog(null,Arrays.toString(encryptedMessages));
                 }
                 else if(e.getSource()==decryptButton)
                 {
@@ -61,7 +72,22 @@ public class EncryptionUI extends JFrame implements ActionListener{
                 }
             }
         }
-        private void createEncryptionMenu(){
+
+        private void createLoginMenu()
+        {
+            JFrame jFrameWindow = new JFrame("Login");
+
+            FlowLayout flowLayout = new FlowLayout();
+
+            jFrameWindow.setLayout(flowLayout);
+            jFrameWindow.setSize(300,200);
+            jFrameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        }
+
+        private void createEncryptionMenu()
+        {
         JMenuItem item;
 
         fileMenu = new JMenu("View");
@@ -78,6 +104,14 @@ public class EncryptionUI extends JFrame implements ActionListener{
         item.addActionListener(this);
         fileMenu.add(item);
 
+        item = new JMenuItem("Username");
+        item.addActionListener(this);
+        fileMenu.add(item);
+
+        item = new JMenuItem("Password");
+        item.addActionListener(this);
+        fileMenu.add(item);
+
         fileMenu.addSeparator();
 
         item = new JMenuItem("Quit");
@@ -85,7 +119,8 @@ public class EncryptionUI extends JFrame implements ActionListener{
         fileMenu.add(item);
         }
 
-    private void createEditMenu(){
+        private void createEditMenu()
+    {
         JMenuItem item;
 
         editMenu = new JMenu("Edit");
@@ -99,7 +134,8 @@ public class EncryptionUI extends JFrame implements ActionListener{
         editMenu.add(item);
     }
 
-        private void createJButtons(){
+        private void createJButtons()
+    {
         encryptButton = new JButton("Encrypt Message");
         add(encryptButton);
 
@@ -110,5 +146,5 @@ public class EncryptionUI extends JFrame implements ActionListener{
 
         encryptButton.addActionListener(handler);
         decryptButton.addActionListener(handler);
-        }
+    }
 }

@@ -7,6 +7,8 @@ public class EncryptMessage
     public static String encryptString(String encryptTemp)
     {
 
+        encryptTemp = JOptionPane.showInputDialog("Input message");
+
         for(int i=0;i<encryptTemp.length();i++)
         {
             encryptTemp = encryptTemp.replace('a','-');
