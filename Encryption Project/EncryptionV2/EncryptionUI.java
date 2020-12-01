@@ -18,6 +18,7 @@ public class EncryptionUI extends JFrame implements ActionListener{
     String[] encryptedMessages = new String[10];
     String[] decryptedMessages = new String[10];
     int i = 0;
+    int j = 0;
 
     public EncryptionUI() {
 
@@ -68,7 +69,9 @@ public class EncryptionUI extends JFrame implements ActionListener{
                 }
                 else if(e.getSource()==decryptButton)
                 {
-                    //DecryptObject.decryptString(decryptButton.getText());
+                    decryptedMessages[j] = DecryptMessage.decryptString(decryptButton.getText());
+                    j++;
+                    JOptionPane.showMessageDialog(null,Arrays.toString(decryptedMessages));
                 }
             }
         }
