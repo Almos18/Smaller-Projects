@@ -11,6 +11,7 @@ public class DecryptMessage
         String decryptReturnMain = "";
 
         //https://fsymbols.com/keyboard/windows/alt-codes/list/
+        //https://www.javatpoint.com/java-string-replace
 
         for (int i = 0; i < decryptTemp.length(); i++)
         {

@@ -24,7 +24,9 @@ public class EncryptionUI extends JFrame implements ActionListener {
 
     //https://www.w3schools.com/java/java_arraylist.asp
 
-    //OOP labsheets
+    //OOP lab sheets
+
+
 
     public EncryptionUI()
     {
@@ -68,6 +70,7 @@ public class EncryptionUI extends JFrame implements ActionListener {
                 {
                     JOptionPane.showMessageDialog(null, "You have to at least write something",
                     "Error", JOptionPane.ERROR_MESSAGE);
+                    //Not working
                 }
                 else
                     password = passwordField.getPassword();
@@ -76,8 +79,6 @@ public class EncryptionUI extends JFrame implements ActionListener {
 
                     JOptionPane.showMessageDialog(null, "Welcome to the system",
                     "Success", JOptionPane.INFORMATION_MESSAGE);
-
-
             }
         }
     }
@@ -92,6 +93,8 @@ public class EncryptionUI extends JFrame implements ActionListener {
                 EncryptObject done = new EncryptObject(EncryptMessage.encryptString(encryptMessageVariable),
                 encryptMessageVariable);
 
+                JOptionPane.showMessageDialog(null,"The encrypted message is " + done.getEncryptedMessages(), "Success",JOptionPane.INFORMATION_MESSAGE);
+
                 mainArray.add(done.getEncryptedMessages());
                 mainArray.add(done.getDecryptedMessages());
 
@@ -99,8 +102,9 @@ public class EncryptionUI extends JFrame implements ActionListener {
             else if (e.getSource() == decryptButton)
             {
                 decryptMessageVariable = JOptionPane.showInputDialog("Enter a message you wish to decrypt");
-                EncryptObject done = new EncryptObject(DecryptMessage.decryptString(decryptMessageVariable),
-                decryptMessageVariable);
+                EncryptObject done = new EncryptObject(decryptMessageVariable, DecryptMessage.decryptString(decryptMessageVariable));
+
+                JOptionPane.showMessageDialog(null,"The decrypted message is " + done.getDecryptedMessages(), "Success",JOptionPane.INFORMATION_MESSAGE);
 
                 mainArray.add(done.getEncryptedMessages());
                 mainArray.add(done.getDecryptedMessages());
@@ -125,6 +129,8 @@ public class EncryptionUI extends JFrame implements ActionListener {
             recordedMessages.setCaretPosition(0);
             recordedMessages.setEditable(false);
 
+            //https://docs.oracle.com/javase/7/docs/api/javax/swing/JTextArea.html
+
             JOptionPane.showMessageDialog(null,new JScrollPane(recordedMessages),
             "RESULT",JOptionPane.INFORMATION_MESSAGE);
         }
@@ -139,6 +145,7 @@ public class EncryptionUI extends JFrame implements ActionListener {
         {
             JOptionPane.showMessageDialog(null,"Your password is " + password,
             "Password",JOptionPane.INFORMATION_MESSAGE);
+            //Unfinished
         }
     }
 

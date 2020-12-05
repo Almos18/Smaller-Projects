@@ -26,11 +26,10 @@ public class EncryptMessage
                 encryptReturnMain += thirdDictionary(encryptTemp, i);
                 twoAndFive += 3;
             }
-            //https://fsymbols.com/keyboard/windows/alt-codes/list/
         }
         return encryptReturnMain;
     }
-
+    //Goes through 3 different dictionaries to make guessing the words more difficult
     private static String firstDictionary (String encryptTemp, int i)
     {
         String encryptReturn = "";
