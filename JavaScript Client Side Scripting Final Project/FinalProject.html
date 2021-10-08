@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+    
+    <style>
+    table, td {
+    border: 1px solid black;
+    }     
+    #Section1Div{
+    display: none;       
+    }  
+    #Section2Div{
+    display: none;
+    }
+    #Section3Div{
+    display: none;
+    }
+    #Section4Div{
+    display: none;
+    }
+    #Section5Div{
+    display: none;
+    }
+    #Section6Div{
+    display: none;
+    }
+    #Section7Div{
+    display: none;
+    }
+    #Section8Div{
+    display: none;
+    }
+    #Section9Div{
+    display: none;
+    }
+    #Section10Div{
+    display: none;
+    }
+    #Section11Div{
+    display: none;
+    }
+    </style>
+    
+  </head>
+  <body>
+  <p>Please consider the following questions and identify your level of agreement with the statement</p>
+    <p>5. Strongly agree</p>
+    <p>4. Agree</p>
+    <p>3. Neutral / Don&#39;t know</p>
+    <p>2. Disagree</p>
+    <p>1. Strongly disagree</p><br><br>
+    
+    <p id="timer"></p>
+    <button onclick="countdown()" id="startButton">Start</button>
+    
+    <div id="Section1Div">
+    <p id="sec1P"><b><u>Section 1: Verification</u></b></p>
+    <table id="section1">        
+        <tr>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>I and/or my colleagues know where to get information to help us analyse the business case for consciously attracting people with disabilities as members</td>
+          <td><input type="radio" name="Section1A" value="1" id="0"></td>
+          <td><input type="radio" name="Section1A" value="2" id="1"></td>
+          <td><input type="radio" name="Section1A" value="3" id="2"></td>
+          <td><input type="radio" name="Section1A" value="4" id="3"></td>
+          <td><input type="radio" name="Section1A" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>I/my colleagues have researched the scope for increasing the participation of the broader community, in particular people with disabilities  </td>
+          <td><input type="radio" name="Section1B" value="1" id="0"></td>
+          <td><input type="radio" name="Section1B" value="2" id="1"></td>
+          <td><input type="radio" name="Section1B" value="3" id="2"></td>
+          <td><input type="radio" name="Section1B" value="4" id="3"></td>
+          <td><input type="radio" name="Section1B" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>I know of disability service providers that I could link with in the local community</td>
+          <td><input type="radio" name="Section1C" value="1" id="0"></td>
+          <td><input type="radio" name="Section1C" value="2" id="1"></td>
+          <td><input type="radio" name="Section1C" value="3" id="2"></td>
+          <td><input type="radio" name="Section1C" value="4" id="3"></td>
+          <td><input type="radio" name="Section1C" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>My colleagues and I inclusivize our services to provide for people with disabilities </td>
+          <td><input type="radio" name="Section1D" value="1" id="0"></td>
+          <td><input type="radio" name="Section1D" value="2" id="1"></td>
+          <td><input type="radio" name="Section1D" value="3" id="2"></td>
+          <td><input type="radio" name="Section1D" value="4" id="3"></td>
+          <td><input type="radio" name="Section1D" value="5" id="4"></td>
+        </tr>
+        
+        <br>
+            
+      </table><br><br>
+ 
+      
+      
+      <table id="Verification">
+    <tr>
+      <td><b>VERIFICATION(20)</b></td>
+    </tr>
+    <tr>
+      <td>16-20</td>
+      <td>Well done you are clearly being proactive in considering making your services more universal</td>
+    </tr>
+    <tr>
+      <td>10-15</td>
+      <td>With a little more thought you will see more opportunities for increasing the universability of your services</td>
+    </tr>
+    <tr>
+      <td>4-9</td>
+      <td>The face to face training session will be a great opportunity for you to get guidance on progressing the universability of your organisation</td>
+    </tr>
+    
+    
+   
+
+    </table><br><br>
+      <button type="button" onclick="submitResults1()">Next</button>   
+    
+     </div> 
+      
+      
+      
+      
+      
+      
+      <div id="Section2Div">
+      <p id="sec2P"><b><u>Section 2: Value Proposition</u></b></p>
+      <table id="section2">
+        <tr>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>My colleagues and I have a significant contribution to make to the quality of life of people in our community, including people with disabilities</td>
+          <td><input type="radio" name="Section2A" value="1" id="0"></td>
+          <td><input type="radio" name="Section2A" value="2" id="1"></td>
+          <td><input type="radio" name="Section2A" value="3" id="2"></td>
+          <td><input type="radio" name="Section2A" value="4" id="3"></td>
+          <td><input type="radio" name="Section2A" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>My colleagues and I have the scope to improve opportunities for participation in fitness activities for people living in, or visiting our community, including people with disabilities</td>
+          <td><input type="radio" name="Section2B" value="1" id="0"></td>
+          <td><input type="radio" name="Section2B" value="2" id="1"></td>
+          <td><input type="radio" name="Section2B" value="3" id="2"></td>
+          <td><input type="radio" name="Section2B" value="4" id="3"></td>
+          <td><input type="radio" name="Section2B" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>The benefits of increasing our UniversAbility  to increase participation are clear</td>
+          <td><input type="radio" name="Section2C" value="1" id="0"></td>
+          <td><input type="radio" name="Section2C" value="2" id="1"></td>
+          <td><input type="radio" name="Section2C" value="3" id="2"></td>
+          <td><input type="radio" name="Section2C" value="4" id="3"></td>
+          <td><input type="radio" name="Section2C" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>My colleagues and I play a major role in providing health services to the entire community, including people with disabilities</td>
+          <td><input type="radio" name="Section2D" value="1" id="0"></td>
+          <td><input type="radio" name="Section2D" value="2" id="1"></td>
+          <td><input type="radio" name="Section2D" value="3" id="2"></td>
+          <td><input type="radio" name="Section2D" value="4" id="3"></td>
+          <td><input type="radio" name="Section2D" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>The UniversAbility  of our fitness services increases the job satisfaction and turnover of my staff </td>
+          <td><input type="radio" name="Section2E" value="1" id="0"></td>
+          <td><input type="radio" name="Section2E" value="2" id="1"></td>
+          <td><input type="radio" name="Section2E" value="3" id="2"></td>
+          <td><input type="radio" name="Section2E" value="4" id="3"></td>
+          <td><input type="radio" name="Section2E" value="5" id="4"></td>
+        </tr>
+        </table>
+        
+           <br><br>
+           
+           
+         <table id="ValueProposition">
+    <tr>
+      <td><b>VALUE PROPOSITION(25)</b></td>
+    </tr>
+    <tr>
+      <td>20-25</td>
+      <td>You have a very high level of appreciation of the mutual benefits for all stakeholders in an inclusive organisation</td>
+    </tr>
+    <tr>
+      <td>12-19</td>
+      <td>You have some sense of the benefits of a universal organisation</td>
+    </tr>
+    <tr>
+      <td>5-11</td>
+      <td>The face to face training session will be a great opportunity for you to gain some perspective of the benefits of universability to your organisation and its members</td>
+    </tr>
+    </table>
+      <br><br>
+        
+         <button type="button" id="Next2" onclick="submitResults2()">Next</button>
+        
+      </div>  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div id="Section3Div">
+        
+        <p><b><u>Section 3: Vision</u></b></p>
+        <table id="section3a">
+        <tr>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>My colleagues and I envision ourselves as leaders of cultural change</td>
+          <td><input type="radio" name="Section3A" value="1" id="0"></td>
+          <td><input type="radio" name="Section3A" value="2" id="1"></td>
+          <td><input type="radio" name="Section3A" value="3" id="2"></td>
+          <td><input type="radio" name="Section3A" value="4" id="3"></td>
+          <td><input type="radio" name="Section3A" value="5" id="4"></td>
+        </tr>        
+        </table>
+        
+        <p>Which of the following statements best describes your situation within your organisation <b><u><i>(Please select one)</i></u></b></p>
+        
+        <table id="section3b">
+        <tr>
+          <td>I and/or my colleagues have identified set targets for increasing the UniversAbility  of our services and are putting strategies in place to achieve these goals </td>
+          <td><input type="radio" name="Section3B" value="5" id="4"></td>
+        </tr>
+        <tr>
+          <td>I and/or my colleagues have identified scope for increasing the UniversAbility  of our services </td>
+          <td><input type="radio" name="Section3B" value="4" id="3"></td>
+        </tr>
+        <tr>
+          <td>I THINK there may be scope for inclusivizing our services but am not sure </td>
+          <td><input type="radio" name="Section3B" value="3" id="2"></td>
+        </tr>
+        <tr>
+          <td>I have never considered inclusivizing our services until now</td>
+          <td><input type="radio" name="Section3B" value="2" id="1"></td>
+        </tr>
+        <tr>
+          <td>I don&#39;t think inclusivizing our services, in particular for people with disabilities, is really an option for us but won&#39;t rule it out completely until it has been fully explored </td>
+          <td><input type="radio" name="Section3B" value="1" id="0"></td>
+        </tr>
+        </table>
+        <br><br>
+        <table id="Vision">
+    <tr>
+      <td><b>Vision(10)</b></td>
+    </tr>
+    <tr>
+      <td>6-10</td>
+      <td>You can see an inclusive future for your organisation and its members, the challenge is now to ensure that your decisions and resource allocations make this happen</td>
+    </tr>
+    <tr>
+      <td>2-5</td>
+      <td>The face to face session has great scope to convince you of the feasibility of promoting inclusion - just keep your mind open to the possibility</td>
+    </tr>
+    </table>
+    <br><br>
+        
+          <button type="button" onclick="submitResults3()">Next</button>  
+        
+        
+       </div> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div id="Section4Div">
+        
+        <p><b><u>Section 4: Philosophy</u></b></p>
+         <p>1.	Does your organisation have stated ideals in your strategic plan or other management documents which relate UniversAbility of your services?<br>
+         <b>Yes<input type="radio" name="Section4A" value="10" id="0">No<input type="radio" name="Section4A" value="0" id="1"></b></p>
+         
+         <p>2.	Do you think an inclusive philosophy is a lived experience by:<br>
+         <b>(a) Management?<input type="checkbox" name="Section4B" value="10" id="0"> (b) Staff?<input type="checkbox" name="Section4B" name="Section4B" value="10" id="1"> 
+         (c) Customers?<input type="checkbox" name="Section4B" name="Section4B" value="10" id="2"></b></p><br>
+          <br>
+          
+         <table id="Philosophy">
+    <tr>
+      <td><b>PHILOSOPHY(40)</b></td>
+    </tr>
+    <tr>
+      <td>30-40</td>
+      <td>Your organisation&#39;s value system is an inclusive one. Your challenge will be to safeguard this and promote this philosophy within the wider fitness sector</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>While there is some openness to equity in your organisation the commitment is not yet wholly embraced by all. 
+      Belief systems within the organisation may be confused and possibly conflicting. It would be desirable 
+      to promote dialogue amongst your stakeholders around the topic of inclusion</td>
+    </tr>
+    <tr>
+      <td>0-10</td>
+      <td>The face to face training session will only be of value to progressing your universability if you are 
+      willing to challenge your belief system about access to fitness services being a fundamental</td>
+    </tr>  
+    </table>
+    <br><br>      
+         
+           <button type="button" onclick="submitResults4()">Next</button> 
+         
+       </div>  
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          <div id="Section5Div">
+         
+          <p><b><u>Section 5: Policy</u></b></p>
+          <p>1.	Does your charging policy account for the varied needs of your customers? E.g. No charge for personal assistants<br>
+          <b>Yes<input type="radio" name="Section5A" value="10" id="0">No<input type="radio" name="Section5A" value="0" id="1"></b></p>
+           
+          <p>2.	Do you track and monitor the proportion of your club members who experience disabilities?<br>
+          <b>Yes<input type="radio" name="Section5B" value="10" id="0">No<input type="radio" name="Section5B" value="0" id="1"></p></b>
+           
+          <p>3.	Have you a budget allocated to:<br>
+          (a)	increasing the UniversAbility  of your services? (eg. facilities, equipment and staff training)	
+          <br><b>Yes<input type="radio" name="Section5C" value="10" id="0">No<input type="radio" name="Section5C" value="0" id="1">Not needed because  equipment is already fully accessible
+          <input type="radio" name="Section5C" value="10" id="2"></b></p>
+          
+          <p>(b)	increasing the UniversAbility  of your policies? 
+          <br><b>Yes<input type="radio" name="Section5D" value="10" id="0">No<input type="radio" name="Section5D" value="0" id="1"></b></p>
+          
+          <p>4.	Are you familiar with the national legislation that relates to disability service provision?<br> 
+          <b>Yes<input type="radio" name="Section5E" value="10" id="0"> No<input type="radio" name="Section5E" value="0" id="1"></b></p><br>
+          <br><br>
+            <table id="Policy">
+    <tr>
+      <td><b>POLICY(50)</b></td>
+    </tr>
+    <tr>
+      <td>40-50</td>
+      <td>Your intentions are very sound in respect of inclusion and you have the potential to be a high achiever in this respect</td>
+    </tr>
+    <tr>
+      <td>30-20</td>
+      <td>Your journey of making organisational policies inclusive has started well and this may be the catalyst for enhanced universability &ndash; if you are open to progressive change</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Your policies are confused and possibly conflicting. Some guidance will be needed to bring greater coherency to your efforts to date</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>Universability is not something with which you have yet engaged, so the face to face training session will be an opportunity for significant learning in this respect</td>
+    </tr>
+    </table>
+      <br><br>
+      
+      <button type="button" onclick="submitResults5()">Next</button>   
+       
+          </div>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+          <div id="Section6Div">
+       
+          <p><b><u>Section 6: Processes</p></b></u>
+          <p>1.	Do you engage with disability groups in your local community?<br>
+          <b>Yes<input type="radio" name="Section6A" value="10" id="0"> No<input type="radio" name="Section6A" value="0" id="1"></b></p>
+          
+          <p>2.	Have you forged any alliance/partnership with any disability organisation?<br>
+ 	        <b>Yes<input type="radio" name="Section6B" value="10" id="0"> No<input type="radio" name="Section6B" value="0" id="1"></b></p>
+          
+          <p>3.	Have you or your staff embraced any assistive technologies (E.g. Assist-Mi app)?<br>
+	        <b>Yes<input type="radio" name="Section6C" value="10" id="0"> No<input type="radio" name="Section6C" value="0" id="1"></b></p>
+          
+          <p>4.	Have you or your colleagues undertaken any research on Inclusivizing your service?<br>
+ 	        <b>Yes<input type="radio" name="Section6D" value="10" id="0"> No<input type="radio" name="Section6D" value="0" id="1"></b></p>
+          
+          <p>5.	Do you encourage your staff to engage in customer satisfaction conversations with different user groups?<br>
+          <b>Yes<input type="radio" name="Section6E" value="10" id="0"> No<input type="radio" name="Section6E" value="0" id="1"></b></p><br>
+           <br><br>
+          <table id="Process">
+    <tr>
+      <td><b>PROCESSES(50)</b></td>
+    </tr>
+    <tr>
+      <td>30-50</td>
+      <td>You are already a potential resource for people with disabilities in your community, as your networks are an essential element in the UFIT approach</td>
+    </tr>
+    <tr>
+      <td>10-20</td>
+      <td>You have made a positive start upon which your organisation can build sound relationships with people with disabilities. 
+      Unit three will offer you more ideas in respect of forging alliances with people with disabilities</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>You have great scope for learning during the face to face training session, once you have an open mind to the 
+      possibilities that an inclusive approach can offer</td>
+    </tr>
+    </table>
+    <br><br>
+    
+    <button type="button" onclick="submitResults6()">Next</button>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+           <div id="Section7Div">
+
+          <p><b><u>Section 7: Perception</u></b></p>
+          <p>1.	Do you gather information from your users on their beliefs about fitness being a fundamental right for all?<br>
+          <b>Yes<input type="radio" name="Section7A" value="10" id="0"> No<input type="radio" name="Section7A" value="0" id="1"></b></p>
+          
+          <p>2.	Do you gather information from people who do NOT use your facility on fitness being a fundamental right for all?<br>
+          <b>Yes<input type="radio" name="Section7B" value="10" id="0"> No<input type="radio" name="Section7B" value="0" id="1"></b></p><br>
+           <br><br>
+          <table id="Perception">
+    <tr>
+      <td><b>PERCEPTION(20)</b></td>
+    </tr>
+    <tr>
+      <td>10-20</td>
+      <td>As a listening organisation you have important information that can guide your journey towards universability. 
+      Your challenge is to interpret what is being said and to translate it into inclusive actions</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>Your organisation has yet to learn the power of dialogue as a means of providing desirable fitness services to all members of the community</td>
+    </tr>
+    </table>
+        <br><br>  
+          
+           <button type="button" onclick="submitResults7()">Next</button>
+          
+           </div>
+          
+          
+          
+           <div id="Section8Div">       
+          <p><b><u>Section 8: Programmes</u></b></p>
+          This section refers to programmes that you deliver, or support delivery of, to consciously inclusivize your services
+          <p>1.	Do you and your staff provide programmes specifically for people with disabilities?<br>
+          <b>Yes<input type="radio" name="Section8A" id="0" value="yes"> No<input type="radio" name="Section8A" id="1" value="no"></b></p>
+          
+          If Yes please complete the table below<br>
+          
+          <table id="section8A">
+        <tr>
+          <td><b>Disabillity Category</b></td>
+          <td><b>YES</b></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><b>Type</b><i>(Segregated or integrated)</i></td>
+        </tr>
+        <tr>
+          <td>Physical disabilities</td>
+          <td><input type="checkbox" name="Section8B" value="10" id="0"></td>
+        </tr>
+        <tr>
+          <td>Intellectual disabilities</td>
+          <td><input type="checkbox" name="Section8B" value="10" id="1"></td>
+        </tr>
+        <tr>
+          <td>Sensory disabilities</td>
+          <td><input type="checkbox" name="Section8B" value="10" id="2"></td>
+        </tr>
+        <tr>
+          <td>Mental health difficulties</td>
+          <td><input type="checkbox" name="Section8B" value="10" id="3"></td>
+        </tr>  
+        </table>
+        
+        <p>2.	Do people with disabilities use the gym, pool, or participate in group activities etc. alongside other members?<br>
+        <b>Yes<input type="radio" name="Section8C" id="0" value="yes"> No<input type="radio" name="Section8C" id="1" value="no"></b></p><br>
+        If Yes please complete the table below
+        <br>
+        
+        <table id="section8B">
+        <tr>
+          <td><b>Disability Category</b></td>
+          <td><b>YES</b></td>
+        </tr>
+        <tr>
+          <td>Physical disabilities</td>
+          <td><input type="checkbox" name="Section8D" value="10" id="0"></td>
+        </tr>
+        <tr>
+          <td>Intellectual disabilities</td>
+          <td><input type="checkbox" name="Section8D" value="10" id="1"></td>
+        </tr>
+        <tr>
+
+          <td>Sensory disabilities</td>
+          <td><input type="checkbox" name="Section8D" value="10" id="2"></td>
+        </tr>
+        <tr>
+
+          <td>Mental health difficulties</td>
+          <td><input type="checkbox" name="Section8D" value="10" id="3"></td>
+        </tr>       
+        </table><br><br>
+         
+        
+        <table id="Programmes">
+    <tr>
+      <td><b>PROGRAMMES(80)</b></td>
+    </tr>
+    <tr>
+      <td>30-50</td>
+      <td>You have the potential to be a role model of provision in the fitness sector. 
+      Programming is the basic unit of service delivery &ndash; where this is inclusive, your relevance to the wider community is enhanced</td>
+    </tr>
+    <tr>
+      <td>10-20</td>
+      <td>You have made a positive start &ndash; you can use the questions here to reflect on how you can make more progress in this respect</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>You have great scope for learning during the face to face training session, once you have an open mind to the possibilities that an inclusive approach can offer</td>
+    </tr>
+    </table><br><br>
+    
+   
+         <button type="button" onclick="submitResults8()">Next</button> 
+         </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+          <div id="Section9Div">       
+          <p><b><u>Section 9: People</p></b></u>
+        <p>1.	Have you or any of your staff/volunteers had training that facilitates the inclusion of people with disabilities?</p>        
+        
+        (a)	Operational (teaching/instructional staff) <b>Yes<input type="radio" name="Section9A" value="10" id="0">No<input type="radio" name="Section9A" value="0" id="1"></b><br> 
+              	
+        (b)	Management <b>Yes<input type="radio" name="Section9B" value="10" id="0">No<input type="radio" name="Section9B" value="0" id="1"></b><br>      
+          				
+        (c)	Front of house <b>Yes<input type="radio" name="Section9C" value="10" id="0">No<input type="radio" name="Section9C" value="0" id="1"></b><br>	
+        	
+        (d)	Stakeholders/ contracted staff <b>Yes<input type="radio" name="Section9D" value="10" id="0">No<input type="radio" name="Section9D" value="0" id="1"></b><br> 	
+
+        <p>2.	Are people with disabilities employed by your organisation and/or represented on your steering committee/ management committee/ board of management etc.?<br>
+        <b>Yes<input type="radio" name="Section9E" value="10" id="0"> No	<input type="radio" name="Section9E" value="0" id="1"></b></p>
+
+        <p>3.	Is there a member of staff allocated as a liaison/point person for customers with disabilities?<br> 	
+        <b>Yes<input type="radio" name="Section9F" value="10" id="0"> No	<input type="radio" name="Section9F" value="0" id="1"></b></p><br>
+        
+        <table id="People">
+    <tr>
+      <td><b>PEOPLE(60)</b></td>
+    </tr>
+    <tr>
+      <td>40-60</td>
+      <td>You have invested in your organisation&#39;s most important asset. Your potential to offer inclusive services is vast. The challenge is to 
+      make sure that you optimally deploy this wisdom to make all aspects of your service provision truly inclusive</td>
+    </tr>
+    <tr>
+      <td>20-30</td>
+      <td>There is some scope within your organisation to promote universability principles and broaden your organisation&#39;s relevance in the wider community </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Depending on the strength of influence of those with some perspective on inclusion, you may have scope to drive improvements from within. Consider the scope 
+      for repositioning those with training and knowledge in the area of inclusion to optimise their influence</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>Universability is not something with which you have engaged so the face to face training session will be an opportunity for significant learning in this respect</td>
+    </tr>
+    </table><br><br>
+    
+        <button type="button" onclick="submitResults9()">Next</button>
+    
+        </div>
+    
+    
+    
+    
+    
+    
+        <div id="Section10Div">
+        
+        <p><b><u>Section 10: Physical Access/Place</p></b></u>
+        <p>1.	Have you or your colleagues carried out an audit to evaluate the UniversAbility  of your facility<br>                      
+        <b>Yes<input type="radio" name="Section10A" value="10" id="0"> No	<input type="radio" name="Section10A" value="0" id="1"></b></p>
+        
+        <p>2. Does your facility (or the facility you use) consider the following disabilities when evaluating UniversAbility :</p>
+        <table id="Section10">
+        <tr>
+          <td><b>Disability Category</b></td>
+          <td><b>YES</b></td>
+        </tr>
+        <tr>
+          <td>Physical disabilities</td>
+          <td><input type="checkbox" name="Section10B" value="10" id="0"></td>
+        </tr>
+        <tr>
+          <td>Intellectual disabilities</td>
+          <td><input type="checkbox" name="Section10B" value="10" id="1"></td>
+        </tr>
+        <tr>
+          <td>Sensory disabilities</td>
+          <td><input type="checkbox" name="Section10B" value="10" id="2"></td>
+        </tr>
+        <tr>
+          <td>Mental health difficulties</td>
+          <td><input type="checkbox" name="Section10B" value="10" id="3"></td>
+        </tr>        
+        </table><br><br>
+        
+  <table id="PlysicalAccess">
+    <tr>
+      <td><b>PHYSICAL ACCESS/PLACE(50)</b></td>
+    </tr>
+    <tr>
+      <td>40-50</td>
+      <td>The facility is largely accessible and hence there is significant scope for promoting universability. </td>
+    </tr>
+    <tr>
+      <td>20-30</td>
+      <td>While some aspects of your facility are accessible there is scope for enhancement. The face to face training session will offer you some suggestions for improvement here.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>While you have made a start in the direction of universability there is considerable scope for improvements. </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>The face to face training session will provide you with wonderful ideas for making small (and inexpensive) changes to enhance the universability of the facility.</td>
+    </tr>
+  </table><br><br>
+    
+           <button type="button" onclick="submitResults10()">Next</button>
+           </div>
+    
+    
+    
+    
+    
+    
+    <div id="Section11Div">
+    <p><b><u>Section 11: Promotion</u></b></p>
+    <p>1. Is your promotional material inclusive of people with disabilities?<br>
+    <b>Yes<input type="radio" name="Section11A" value="10" id="0"> No	<input type="radio" name="Section11A" value="0" id="1"></b></p>
+           
+    <p>2. Have you or your colleagues/staff developed any promotional materials with the aim of attracting people with disabilities?<br>
+    <b>Yes<input type="radio" name="Section11B" value="10" id="0"> No	<input type="radio" name="Section11B" value="0" id="1"></b></p>
+
+
+    <table id="Promotion">   
+    <tr>
+      <td><b>PROMOTION(20)</b></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>You clearly understand the power of imagery and language and your materials may be potential templates for others in the promotion of fitness services</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Your organisation has some appreciation of the need for have diversity to be represented in your promotional materials. 
+      With a little more thoughtfulness your promotional campaigns will speak louder to a wider audience</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>The face to face training session will offer you many ideas for inclusivizing your promotion materials</td>
+    </tr>
+    </table><br><br>
+         <button type="button" onclick="submitResults11()">Process</button>
+
+         </div>
+         
+         
+         
+         
+         
+    
+  <script>
+  
+    function countdown()
+    {
+      setTimeout(reload, 300000);
+      document.getElementById("Section1Div").style.display="block";     
+      document.getElementById("startButton").style.display="none";   
+    }
+    
+    function reload()
+    {
+    window.location.reload(false);
+    alert("Sorry your time has run out, please take the test again");  
+    }
+  
+    let total=0;
+    
+    function submitResults1()
+    {
+      let currentTotal = total;
+      let checked = 0;              
+      let result1 = document.getElementsByName("Section1A");
+      for(i=0;i<result1.length;i++) 
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }               
+      }     
+     
+      let result2 = document.getElementsByName("Section1B");
+      for(i=0;i<result2.length;i++) 
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      
+      let result3 = document.getElementsByName("Section1C");
+      for(i=0;i<result3.length;i++) 
+      {
+          if(result3[i].checked)
+          {
+          total+=Number(result3[i].value)
+          checked++;
+          }
+      }
+      
+      let result4 = document.getElementsByName("Section1D");
+      for(i=0;i<result4.length;i++) 
+      {
+          if(result4[i].checked)
+          {
+          total += Number(result4[i].value)
+          checked++;
+          }
+      }
+          
+      if(checked==4)
+      {
+        alert(total);   
+        document.getElementById("Section1Div").style.display="none";
+        document.getElementById("Section2Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }       
+    }
+    
+    function submitResults2()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section2A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section2B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      
+      let result3 = document.getElementsByName("Section2C");
+      for(i=0;i<result3.length;i++)
+      {
+          if(result3[i].checked)
+          {
+          total+=Number(result3[i].value)
+          checked++;
+          }
+      }
+      
+      let result4 = document.getElementsByName("Section2D");
+      for(i=0;i<result4.length;i++)
+      {
+          if(result4[i].checked)
+          {
+          total+=Number(result4[i].value)
+          checked++;
+          }
+      }
+      
+      let result5 = document.getElementsByName("Section2E");
+      for(i=0;i<result5.length;i++)
+      {
+          if(result5[i].checked)
+          {
+          total+=Number(result5[i].value)
+          checked++;
+          }
+      }
+      
+      if(checked==5)
+      {
+        alert(total);      
+        document.getElementById("Section2Div").style.display="none";
+        document.getElementById("Section3Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }
+    }
+    
+    function submitResults3()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section3A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section3B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      if(checked==2)
+      {
+        alert(total);
+        document.getElementById("Section3Div").style.display="none";
+        document.getElementById("Section4Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;  
+      }      
+    }
+    
+    function submitResults4()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section4A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section4B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          }
+      }
+      if(checked==1)
+      {
+        alert(total);
+        document.getElementById("Section4Div").style.display="none";
+        document.getElementById("Section5Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }      
+    }
+    
+    function submitResults5()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section5A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section5B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      
+      let result3 = document.getElementsByName("Section5C");
+      for(i=0;i<result3.length;i++)
+      {
+          if(result3[i].checked)
+          {
+          total+=Number(result3[i].value)
+          checked++;
+          }
+      }
+      
+      let result4 = document.getElementsByName("Section5D");
+      for(i=0;i<result4.length;i++)
+      {
+          if(result4[i].checked)
+          {
+          total+=Number(result4[i].value)
+          checked++;
+          }
+      }
+      
+      let result5 = document.getElementsByName("Section5E");
+      for(i=0;i<result5.length;i++)
+      {
+          if(result5[i].checked)
+          {
+          total+=Number(result5[i].value)
+          checked++;
+          }
+      }
+      
+      if(checked==5)
+      {
+        alert(total);
+        document.getElementById("Section5Div").style.display="none";
+        document.getElementById("Section6Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal; 
+      }
+    }
+    
+    function submitResults6()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section6A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section6B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      let result3 = document.getElementsByName("Section6C");
+      for(i=0;i<result3.length;i++)
+      {
+          if(result3[i].checked)
+          {
+          total+=Number(result3[i].value)
+          checked++;
+          }
+      }
+      let result4 = document.getElementsByName("Section6D");
+      for(i=0;i<result4.length;i++)
+      {
+          if(result4[i].checked)
+          {
+          total+=Number(result4[i].value)
+          checked++;
+          }
+      }
+      let result5 = document.getElementsByName("Section6E");
+      for(i=0;i<result5.length;i++)
+      {
+          if(result5[i].checked)
+          {
+          total+=Number(result5[i].value)
+          checked++;
+          }
+      }
+      
+      if(checked==5)
+      {
+        alert(total);
+        document.getElementById("Section6Div").style.display="none";
+        document.getElementById("Section7Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal; 
+      }
+    }
+    
+    function submitResults7()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section7A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      let result2 = document.getElementsByName("Section7B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      if(checked==2)
+      {
+        alert(total);
+        document.getElementById("Section7Div").style.display="none";
+        document.getElementById("Section8Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }
+    }
+    
+    
+    
+    function submitResults8()
+    {
+      let answer1;
+      let answer2;
+      let incorrect = 0;
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section8A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+            answer1=(result1[i].value)
+            checked++;
+          }
+      }     
+      let result2 = document.getElementsByName("Section8B");     
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked && answer1=="yes")
+          {
+            total+=Number(result2[i].value)
+          }
+          else if(result2[i].checked && answer1=="no")
+          {
+            incorrect++;
+          }    
+                      
+      }
+        
+      
+      let result3 = document.getElementsByName("Section8C");
+      for(i=0;i<result3.length;i++)
+      {
+          if(result3[i].checked)
+          {
+            answer2=(result3[i].value)
+            checked++;
+          }
+      }   
+      let result4 = document.getElementsByName("Section8D");
+      for(i=0;i<result4.length;i++)
+      {
+        if(result4[i].checked && answer2=="yes")
+        {
+          total+=Number(result4[i].value)
+        }
+        else if(result4[i].checked && answer2=="no")
+        {
+          incorrect++;
+        }
+      }
+      
+      
+      
+      if(checked==2 && incorrect==0)
+      {
+        alert(total);
+        document.getElementById("Section8Div").style.display="none";
+        document.getElementById("Section9Div").style.display="block";
+      }
+      
+      else if(incorrect>0)
+      {
+        alert("Error, You answered no then checked the boxes");
+        let currentTotal = total;
+      }
+      
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }
+    }
+    
+    
+    
+    function submitResults9()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section9A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section9B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      
+      let result3 = document.getElementsByName("Section9C");
+      for(i=0;i<result3.length;i++)
+      {
+          if(result3[i].checked)
+          {
+          total+=Number(result3[i].value)
+          checked++;
+          }
+      }
+      
+      let result4 = document.getElementsByName("Section9D");
+      for(i=0;i<result4.length;i++)
+      {
+          if(result4[i].checked)
+          {
+          total+=Number(result4[i].value)
+          checked++;
+          }
+      }
+      
+      let result5 = document.getElementsByName("Section9E");
+      for(i=0;i<result5.length;i++)
+      {
+          if(result5[i].checked)
+          {
+          total+=Number(result5[i].value)
+          checked++;
+          }
+      }
+      
+      let result6 = document.getElementsByName("Section9F");
+      for(i=0;i<result6.length;i++)
+      {
+          if(result6[i].checked)
+          {
+          total+=Number(result6[i].value)
+          checked++;
+          }
+      }
+      
+      if(checked==6)
+      {
+        alert(total);
+        document.getElementById("Section9Div").style.display="none";
+        document.getElementById("Section10Div").style.display="block";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }           
+    }
+    
+    function submitResults10()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section10A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      let result2 = document.getElementsByName("Section10B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          }
+      }
+      if(checked==1)
+      {
+        alert(total);
+        document.getElementById("Section10Div").style.display="none";
+        document.getElementById("Section11Div").style.display="block"; 
+      }
+      
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }
+    }
+    
+    function submitResults11()
+    {
+      let currentTotal = total;
+      let checked = 0;
+      let result1 = document.getElementsByName("Section11A");
+      for(i=0;i<result1.length;i++)
+      {
+          if(result1[i].checked)
+          {
+          total+=Number(result1[i].value)
+          checked++;
+          }
+      }
+      
+      let result2 = document.getElementsByName("Section11B");
+      for(i=0;i<result2.length;i++)
+      {
+          if(result2[i].checked)
+          {
+          total+=Number(result2[i].value)
+          checked++;
+          }
+      }
+      if(checked==2)
+      {
+        alert(total);
+        localStorage.setItem("tot",total);
+        window.open("Results.html");
+        document.getElementById("Section11Div").style.display="none";
+      }
+      else
+      {
+        alert("Check all necessary boxes to continue");
+        total = currentTotal;
+      }
+    }
+    
+    
+         
+    </script>  
+    
+    
+    
+  </body>
+</html>
